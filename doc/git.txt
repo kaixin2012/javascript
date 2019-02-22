@@ -1,0 +1,5 @@
+git使用说明
+----------------
+git add .
+git commit -m "upload files"
+git push

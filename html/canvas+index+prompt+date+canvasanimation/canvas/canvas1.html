@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            my-goodcanvas
+        </title>
+    </head>
+    <body>
+        <canvas id="canvas" width="325px" height="325px"  style="background:chartreuse" />
+    </body>
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(20, 20, 50, 50);  
+        ctx.fillRect(110, 20, 50, 50)
+        ctx.fillRect(200, 20, 50, 50);
+        ctx.fillRect(60, 90, 50, 50);
+        ctx.fillRect(150, 90, 50, 50);
+        ctx.fillRect(100, 150, 50, 50);
+    </script>
+</html>

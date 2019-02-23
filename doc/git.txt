@@ -1,5 +1,10 @@
 git使用说明
 ----------------
 git add .
-git commit -m "upload files"
+git commit -m "修改说明"
 git push
+
+
+查看状态
+----------------
+git status

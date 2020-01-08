@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>
+        上天
+    </title>
+</head>
+
+<body>
+    <input id="myBtton" type="button" onclick="clickMe();" value="上天" />
+    <script>
+        function clickMe() {
+            var isok = window.confirm("你想上天吗?");
+            var message = null;
+            if (isok) {
+                message = "你想上天";
+            } else {
+                message = "你想入地";
+            }
+            window.alert(message);
+        }
+    </script>
+</body>
+
+</html>

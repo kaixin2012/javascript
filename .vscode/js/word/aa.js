@@ -8,4 +8,4 @@ function addton(n){
 var n=20;
 var sum = addton(n);
 
-console.log(sum);
+console.log("sum is "+sum);

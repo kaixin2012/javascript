@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            canvas
+        </title>
+    </head>
+    <body>
+        <canvas id="canvas" width="350px" height="350px"style="background:whitesmoke"/>
+    </body>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle="black";
+        for(var row=0; row<8;row++){
+            for(var c=0;c<8;c++){
+                var x=40*row;    
+                var y=40*c;
+                var width=40;
+                var height=40;
+                ctx.strokeRect(x,y,width,height);
+                var isFill=(row+c)%2;
+                if(isFill){
+                    ctx.fillRect(x,y,width,height);  
+                }
+            }
+           
+        }          
+    </script>
+</html>

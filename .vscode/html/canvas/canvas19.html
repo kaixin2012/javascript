@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            canvas
+        </title>
+    </head>
+    <body>
+        <canvas id="canvas" width="800px" height="800px" style="background:whitesmoke"/>
+
+        <script>
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle="red";
+            ctx.beginPath();
+            ctx.arc(90,50,40,0,2*Math.PI);
+            ctx.stroke();
+            ctx.fill();
+        </script>
+    </body>
+    
+</html>        

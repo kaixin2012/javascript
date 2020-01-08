@@ -1,4 +1,4 @@
-var persons = ["徐行知","王涵宇","猪","zhangyuchen"];
+var persons = ["徐行知","王涵宇"];
 
 console.log("删除前元素："+persons);
 

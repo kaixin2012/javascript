@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            canvas
+        </title>
+    </head>
+    <body>
+        <canvas id="canvas" width="300px" height="300px"style="background:whitesmoke"/>
+    </body>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        for(var row=0; row<8;row++){
+            var x=40*row;
+            var y=0;
+            var width=40;
+            var height=40;
+            ctx.strokeRect(x,y,width,height);
+        }          
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>520<title>
+	</head>
+	<body style="margin: 50px;">		
+		<canvas id="canvas" width="8000" height="800" style="background-color: aquamarine;" onmousedown="drawStart(event)" onmouseup="drawEnd(event)" />
+			
+	</body>
+	<script>
+		var canvas = document.getElementById(canvas);
+		var ctx = canvas.getContext("2d");
+
+		var startPoit = {x:0,y:0};
+			
+		
+		function drawStart(event) {
+			startPoit.x = event.pageX - canvas.getBoundingClientRect().x;
+			startPoit.y = event.pageY - canvas.getBoundingClientRect().y;
+			console.log("mouse down", startPoit);
+		}
+
+		function drawEnd(event) {
+			var endPoint = {x:0,y:0};
+			endPoint.x = event.pageX - canvas.getBoundingClientRect().x;
+			endPoint.y = event.pageY - canvas.getBoundingClientRect().y;
+
+			ctx.beginPath();
+			ctx.moveTo(startPoit.x, startPoit.y);
+			ctx.lineTo(endPoint.x, endPoint.y);
+			ctx.stroke();
+			ctx.closePath();
+			console.log("mouse up", endPoint);
+		}
+	</script>
+</html>

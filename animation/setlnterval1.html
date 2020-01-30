@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>drawImage</title>
+	</head>
+	<body>
+		<p id="date"></p>
+	</body>
+	<script>
+		var i=0
+		function drawImage(){
+			document.getElementById("date").innerHTML=i++;
+		}
+		setInterval(drawImage,1000/60);
+	</script>
+</html>

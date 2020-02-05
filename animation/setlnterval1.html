@@ -1,15 +1,15 @@
 <html>
 	<head>
-		<title>drawImage</title>
+		<title>draw</title>
 	</head>
 	<body>
 		<p id="date"></p>
 	</body>
 	<script>
 		var i=0
-		function drawImage(){
+		function draw(){
 			document.getElementById("date").innerHTML=i++;
 		}
-		setInterval(drawImage,1000/60);
+		setInterval(draw,0.1);
 	</script>
 </html>

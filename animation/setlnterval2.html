@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>drawImage</title>
+		<title>draw</title>
 	</head>
 	<body>
 		<canvas id="canvas" width="800px" height="800px" style="background-color: whitesmoke;"></canvas>
@@ -9,14 +9,16 @@
 		var canvas = document.getElementById("canvas");
 		var ctx = canvas.getContext("2d");
 		ctx.fillStyle = "red";
+		ctx.strokeStyle="black"
 
 		var x = 100;
 		var y = 0;
 		var width= 80;
 
-		function drawImage() {
+		function draw() {
 			ctx.clearRect(0,0,canvas.width,canvas.height);
-			ctx.fillRect(x, y, width, width);
+			// ctx.fillRect(x, y, width, width);
+			ctx.strokeRect(x, y, width, width);
 			//x += 3;
 			
 			if(y > canvas.height){
@@ -28,6 +30,6 @@
 			// 	x=0;
 			// }
 		}
-		setInterval(drawImage, 1000/60 );
+		setInterval(draw, 1000/60 );
 	</script>
 </html>

@@ -8,3 +8,14 @@ git push
 查看状态
 ----------------
 git status
+
+
+下载远程仓库到本地
+-----------------
+进入到/e/git目录
+git clone git@github.com:xufangbo/javascript.git baba
+
+查看本地仓库对应的远程仓库
+-----------------
+进入到/e/git/javascript目录，或者/e/git/baba目录
+git remote -v

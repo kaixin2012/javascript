@@ -9,40 +9,40 @@
 		<canvas id="canvas" width="800px" height="800" style="background-color: whitesmoke;"></canvas>
 	</body>
 	<script>
-	var canvas=document.getElementById("canvas");
-	var ctx=canvas.getContext("2d");
-	var x=0;
-	var y=0;
-	
-	ctx.fillStyle="red";
-	
-	function draw() {
-		
-		ctx.clearRect(0,0,canvas.width,canvas.height);
-		
-		drawTriangle(y);
-		
-		y+=3;
-		if (y>canvas.height) {
-			y=0;
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var x = 0;
+		var y = 0;
+
+		ctx.fillStyle = "red";
+
+		function draw() {
+
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+			drawTriangle(y);
+
+			y += 3;
+			if (y > canvas.height) {
+				y = 0;
+			}
 		}
-	}
-	
-	function drawTriangle(y){
-		
-		
-		ctx.beginPath();
-		
-		ctx.moveTo(30,y);
-		ctx.lineTo(60,y+50);
-		ctx.lineTo(0,y+50);
-		ctx.lineTo(30,y);
-		ctx.stroke();
-		ctx.fill();
-		ctx.closePath();
-	}
-	
-	setInterval(draw,1000/60);
+
+		function drawTriangle(y) {
+
+
+			ctx.beginPath();
+
+			ctx.moveTo(30, y);
+			ctx.lineTo(60, y + 50);
+			ctx.lineTo(0, y + 50);
+			ctx.lineTo(30, y);
+			ctx.stroke();
+			ctx.fill();
+			ctx.closePath();
+		}
+
+		setInterval(draw, 1000 / 60);
 	</script>
 
 </html>

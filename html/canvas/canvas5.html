@@ -1,24 +1,27 @@
 <html>
-    <head>
-        <title>
-            my-goodcanvas
-        </title>
-    </head>
-    <body>
-        <canvas id="canvas" width="325px" height="325px"  style="background:whitesmoke" />
-    </body>
 
-    <script>
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "Turquoise";
-        ctx.lineWidth = 4;
-        ctx.beginPath();
-        ctx.moveTo(100, 60);
-        ctx.lineTo(130, 30);  
-        ctx.lineTo(160, 60);
-        ctx.lineTo(100, 60);
-        ctx.stroke();
-        ctx.fill();
-    </script>
+<head>
+    <title>
+        my-goodcanvas
+    </title>
+</head>
+
+<body>
+    <canvas id="canvas" width="325px" height="325px" style="background:whitesmoke" />
+</body>
+
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "Turquoise";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(100, 60);
+    ctx.lineTo(130, 30);
+    ctx.lineTo(160, 60);
+    ctx.lineTo(100, 60);
+    ctx.stroke();
+    ctx.fill();
+</script>
+
 </html>

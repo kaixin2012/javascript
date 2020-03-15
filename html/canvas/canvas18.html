@@ -1,30 +1,32 @@
 <html>
-    <head>
-        <title>
-            canvas
-        </title>
-    </head>
-    <body>
-        <canvas id="canvas" width="800px" height="800px" style="background:whitesmoke"/>
 
-        <script>
-            var canvas = document.getElementById("canvas");
-            var ctx = canvas.getContext("2d");
-            ctx.fillStyle="black";
-            ctx.strokeStyle="red";
-            ctx.beginPath();
-            var p1={x: 30,y: 60};
-            var p2={x: 90,y: 60};
-            var p3={x: 90,y: 90};
-            var p4={x: 30,y: 90};
-            ctx.moveTo(p1.x,p1.y);
-            ctx.lineTo(p2.x,p2.y);
-            ctx.lineTo(p3.x,p3.y);
-            ctx.lineTo(p4.x,p4.y);
-            ctx.lineTo(p1.x,p1.y);
-            ctx.stroke();
-            ctx.fill();
-        </script>
-    </body>
-    
-</html>        
+<head>
+    <title>
+        canvas
+    </title>
+</head>
+
+<body>
+    <canvas id="canvas" width="800px" height="800px" style="background:whitesmoke" />
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = "red";
+        ctx.beginPath();
+        var p1 = { x: 30, y: 60 };
+        var p2 = { x: 90, y: 60 };
+        var p3 = { x: 90, y: 90 };
+        var p4 = { x: 30, y: 90 };
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.lineTo(p3.x, p3.y);
+        ctx.lineTo(p4.x, p4.y);
+        ctx.lineTo(p1.x, p1.y);
+        ctx.stroke();
+        ctx.fill();
+    </script>
+</body>
+
+</html>

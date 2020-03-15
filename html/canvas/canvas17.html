@@ -1,27 +1,29 @@
 <html>
-    <head>
-        <title>
-            canvas
-        </title>
-    </head>
-    <body>
-        <canvas id="canvas" width="800px" height="800px" style="background:whitesmoke"/>
 
-        <script>
-            var canvas = document.getElementById("canvas");
-            var ctx = canvas.getContext("2d");
-            ctx.strokeStyle="red";
-            ctx.beginPath();
-            ctx.moveTo(30,60);
-            ctx.lineTo(90,60);
-            ctx.moveTo(90,60);
-            ctx.lineTo(90,90);
-            ctx.moveTo(90,90);
-            ctx.lineTo(30,90);
-            ctx.moveTo(30,60);
-            ctx.lineTo(30,90);
-            ctx.stroke();
-        </script>
-    </body>
-    
-</html>        
+<head>
+    <title>
+        canvas
+    </title>
+</head>
+
+<body>
+    <canvas id="canvas" width="800px" height="800px" style="background:whitesmoke" />
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "red";
+        ctx.beginPath();
+        ctx.moveTo(30, 60);
+        ctx.lineTo(90, 60);
+        ctx.moveTo(90, 60);
+        ctx.lineTo(90, 90);
+        ctx.moveTo(90, 90);
+        ctx.lineTo(30, 90);
+        ctx.moveTo(30, 60);
+        ctx.lineTo(30, 90);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

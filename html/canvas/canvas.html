@@ -1,22 +1,25 @@
 <html>
-    <head>
-        <title>
-            my-goodcanvas
-        </title>
-    </head>
-    <body>
-        <canvas id="canvas" width="325px" height="325px"  style="background:chartreuse" />
-    </body>
 
-    <script>
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-        for (var i = 0; i < 33; i++){
-            ctx.fillRect(i * 10, i * 10, 10, 10);
-        }
-        for (var i = 0; i < 33; i++){
-            ctx.fillRect(i * 10, i * 10, 10, 10);
-        }
-        
-    </script>
+<head>
+    <title>
+        my-goodcanvas
+    </title>
+</head>
+
+<body>
+    <canvas id="canvas" width="325px" height="325px" style="background:chartreuse" />
+</body>
+
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    for (var i = 0; i < 33; i++) {
+        ctx.fillRect(i * 10, i * 10, 10, 10);
+    }
+    for (var i = 0; i < 33; i++) {
+        ctx.fillRect(i * 10, i * 10, 10, 10);
+    }
+
+</script>
+
 </html>

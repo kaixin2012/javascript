@@ -1,23 +1,26 @@
 <html>
-    <head>
-        <title>
-            my-goodcanvas
-        </title>
-    </head>
-    <body>
-        <canvas id="canvas" width="325px" height="325px"  style="background:chartreuse" />
-    </body>
 
-    <script>
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "yellow";
-        ctx.lineWidth = 4;
-        ctx.strokeRect(20, 20, 50, 50);  
-        ctx.strokeRect(110, 20, 50, 50)
-        ctx.strokeRect(200, 20, 50, 50);
-        ctx.strokeRect(60, 90, 50, 50);
-        ctx.strokeRect(150, 90, 50, 50);
-        ctx.strokeRect(100, 150, 50, 50);
-    </script>
+<head>
+    <title>
+        my-goodcanvas
+    </title>
+</head>
+
+<body>
+    <canvas id="canvas" width="325px" height="325px" style="background:chartreuse" />
+</body>
+
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "yellow";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(20, 20, 50, 50);
+    ctx.strokeRect(110, 20, 50, 50)
+    ctx.strokeRect(200, 20, 50, 50);
+    ctx.strokeRect(60, 90, 50, 50);
+    ctx.strokeRect(150, 90, 50, 50);
+    ctx.strokeRect(100, 150, 50, 50);
+</script>
+
 </html>

@@ -1,46 +1,49 @@
 <html>
-	<head>
 
-		<title>canvas</title>
-	</head>
-	<body>
+<head>
 
-		<canvas id="canvas" width="800px" height="800px" style="background:whitesmoke" />
+	<title>canvas</title>
+</head>
 
-		<script type="text/javascript">
-			var canvas = document.getElementById("canvas");
-			var ctx = canvas.getContext("2d");
-			ctx.fillStyle = "red";
-			ctx.beginPath();
-			
-			// ctx.moveTo(80,80);
-			// ctx.lineTo(80,160);
-			
-			// ctx.moveTo(80,80);
-			// ctx.lineTo(160,80);
-			
-			// ctx.moveTo(160,80);
-			// ctx.lineTo(160,160);
-			
-			// ctx.moveTo(80,160);
-			// ctx.lineTo(160,160);
-			ctx.moveTo(160,160);
-			ctx.arc(120, 160, 40, 0, 1 * Math.PI);
-			
-			ctx.moveTo(80,160);
-			ctx.arc(80,120, 40, Math.PI/2, 1 * Math.PI+Math.PI/2);
-			
-			ctx.moveTo(80,80);
-			ctx.arc(120,80, 40, 1 * Math.PI,0 * Math.PI );
-			
-			ctx.moveTo(160,80);
-			ctx.arc(160,120, 40, 1 * Math.PI+1*Math.PI-0.5*Math.PI,1 * Math.PI-0.5*Math.PI );
-			
-			ctx.moveTo(160,120);
-			ctx.arc(120, 120, 40, 0,2*Math.PI);
-			
-			ctx.stroke();
+<body>
+
+	<canvas id="canvas" width="800px" height="800px" style="background:whitesmoke" />
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "red";
+		ctx.beginPath();
+
+		// ctx.moveTo(80,80);
+		// ctx.lineTo(80,160);
+
+		// ctx.moveTo(80,80);
+		// ctx.lineTo(160,80);
+
+		// ctx.moveTo(160,80);
+		// ctx.lineTo(160,160);
+
+		// ctx.moveTo(80,160);
+		// ctx.lineTo(160,160);
+		ctx.moveTo(160, 160);
+		ctx.arc(120, 160, 40, 0, 1 * Math.PI);
+
+		ctx.moveTo(80, 160);
+		ctx.arc(80, 120, 40, Math.PI / 2, 1 * Math.PI + Math.PI / 2);
+
+		ctx.moveTo(80, 80);
+		ctx.arc(120, 80, 40, 1 * Math.PI, 0 * Math.PI);
+
+		ctx.moveTo(160, 80);
+		ctx.arc(160, 120, 40, 1 * Math.PI + 1 * Math.PI - 0.5 * Math.PI, 1 * Math.PI - 0.5 * Math.PI);
+
+		ctx.moveTo(160, 120);
+		ctx.arc(120, 120, 40, 0, 2 * Math.PI);
+
+		ctx.stroke();
 			// ctx.fill();
-		</script>
-	</body>
+	</script>
+</body>
+
 </html>

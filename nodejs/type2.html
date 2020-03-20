@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body onkeydown="mykeydown(event)" onclick="onMouseMove(event)">
+	<audio id="background1" src="./audio/background1.mp3" controls="controls" autoplay="autoplay"></audio>
+	<br/>
+	<canvas id="canvas" width="500" height="800" style="background-color: whitesmoke;"></canvas>
+	<audio id="audio1" src="./audio/hit.mp3"></audio>
+	<audio id="audio2" src="./audio/no.mp3"></audio>
+</body>
+
+<script type="text/javascript">
+
+function onMouseMove(event){
+	var background1 = document.getElementById("background1");
+	background1.play();
+}
+
+	var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var mychars = [];
+
+	var audio1 = document.getElementById("audio1");
+	var audio2 = document.getElementById("audio2");
+
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = "red";
+	ctx.font = "60px Arial";
+
+	class MyChar {
+		constructor(letter, x, y) {
+			this.letter = letter;
+			this.x = x;
+			this.y = y;
+		}
+		drawItem() {
+			ctx.fillText(this.letter, this.x, this.y);
+
+			this.y += 1.5;
+
+			if (this.y > canvas.height) {
+				var index = mychars.indexOf(this);
+				mychars.splice(index, 1);
+				audio2.currentTime = 0;
+				audio2.play();
+			}
+		}
+	}
+
+	function draw() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		for (var i = 0; i < mychars.length; i++) {
+			var x = mychars[i];
+			x.drawItem(x);
+		}
+	}
+
+	function mykeydown(event) {
+		var myletter = String.fromCharCode(event.keyCode);
+		for (var i = 0; i < mychars.length; i++) {
+			var mychar = mychars[i];
+			if (myletter == mychar.letter) {
+				mychars.splice(i, 1);
+				audio1.currentTime = 0;
+				audio1.play();
+			}
+		}
+	}
+
+	function addChar() {
+		var a = Math.random();
+		var b = a * 25;
+		var index = Math.round(b);
+		var letter = chars[index];
+		mychars.push(new MyChar(letter, Math.random() * (canvas.width - 60), 0))
+	}
+	setInterval(addChar, 1000 * 3);
+	setInterval(draw, 1000 / 60);
+</script>
+
+</html>

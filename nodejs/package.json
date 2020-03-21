@@ -1,0 +1,12 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server1.js",
+  "scripts": {
+    "test": "echo hello",
+	"start":"node server1.js"
+  },
+  "author": "xuxingzhi",
+  "license": "ISC"
+}

@@ -5,7 +5,7 @@
   "main": "server1.js",
   "scripts": {
     "test": "echo hello",
-    "start": "node server1.js"
+    "start": "supervisor server1.js"
   },
   "author": "xuxingzhi",
   "license": "ISC"

@@ -49,32 +49,43 @@
 
 <body>
 
-    <input type="button" id="run" value="运动项目" onclick="">
-    <table>
+    <input type="button" id="sport event" value="sport event" onclick="button()">
+    <table id="mytable">
         <tr>
-            <th>运动项目</th>
-            <th>心里排名(3)</th>
-            <th>喜欢程度(5)</th>
+            <th>sport event</th>
+            <th>Heart ranking (3)</th>
+            <th>Liking degree (5)</th>
         </tr>
         <tr>
-            <td>篮球</td>
+            <td>Basketball</td>
             <td>1</td>
             <td class="last_td">5</td>
         </tr>
         <tr>
-            <td>跑步</td>
+            <td>run</td>
             <td>2</td>
             <td class="last_td">5</td>
         </tr>
         <tr>
-            <td>乒乓球</td>
+            <td>Table Tennis</td>
             <td>3</td>
             <td class="last_td">4</td>
         </tr>
     </table>
 
     <script>
-        // var button = 
+
+        function button() {
+            var isok = window.confirm("Do you want open a table ?");
+
+            var mytable = document.getElementById("mytable");
+
+            if (isok) {
+                mytable.style.display = "";
+            } else {
+                mytable.style.display = "none";
+            }
+        }
     </script>
 </body>
 

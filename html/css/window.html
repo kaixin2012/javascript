@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>
+        my window
+    </title>
+
+    <style>
+        input {
+            display: block;
+            background-color: chartreuse;
+            color: cornflowerblue;
+            border: rgb(15, 126, 15);
+            border-radius: 3px;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        img{
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="button" value="click me" onclick="fly()">
+    <img id="fly" src="./imng/xx.jpeg" />
+
+    <script>
+        function fly() {
+            var isok1 = window.confirm("Do you want open ?");
+            var myImg = document.getElementById("fly");
+
+            if (isok1) {
+                var isok2 = window.confirm("Do you want fly ?");
+
+                if (isok2) {
+                    myImg.style.visibility = "visible";
+                } else {
+                    myImg.style.visibility = "hidden";
+                }
+            } else {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

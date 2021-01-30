@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>
+        input
+    </title>
+
+    <style>
+        input[type="text"],
+        [type="password"] {
+            display: inline;
+            margin: 15px 10px 10px 10px;
+            border: rgb(137, 245, 29) 3px solid;
+            padding: 3px;
+            width: 200px;
+        }
+
+        input[type="number"] {
+            width: 75px;
+            border: rgb(29, 148, 245) 3px solid;
+            margin: 15px 10px 15px 10px;
+            padding: 3px;
+            background-color: rgba(195, 255, 127, 0.493);
+        }
+
+        input[type="button"] {
+            border-radius: 5px;
+            margin: 5px 25px 0px 250px;
+            border: rgb(43, 29, 245) 3px solid;
+            background-color: rgba(173, 235, 226, 0.863);
+        }
+
+        input[type="color"] {
+            border-radius: 5px;
+            margin: 10px;
+            border: rgb(43, 29, 245) 3px solid;
+            background-color: rgba(173, 235, 226, 0.863);
+        }
+
+        label {
+            display: block;
+            width: 200px;
+            vertical-align: top;
+        }
+
+        select {
+            border: rgb(245, 133, 29) 3px solid;
+            margin: 15px 10px 15px 10px;
+            padding: 3px;
+            background-color: aquamarine;
+        }
+
+        body {
+            background-image: linear-gradient(90deg, rgba(224, 93, 93, 0.966), rgba(224, 182, 93, 0.966), rgb(228, 213, 84), rgb(94, 241, 180), rgba(93, 224, 174, 0.966), rgb(122, 123, 235), rgba(224, 93, 93, 0.966));
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="请输入你的用户名">
+    <input type="text" placeholder="请输入你的用户名">
+
+    请输入你的密码
+    <input type="password" placeholder="请输入你的密码">
+
+    请输选择你的性别
+    <input type="radio" name="sex">男
+    <input type="radio" name="sex">女
+
+    <br>
+    <input type="number" value="年龄">
+
+    <br>
+
+    <input type="color">
+
+    <br>
+
+    <select>
+        <option>职业</option>
+        <option>教师</option>
+        <option>学生</option>
+        <option>工程师</option>
+        <option>计算机科学家</option>
+        <option>科学家</option>
+    </select>
+    <br>
+    <input type="button" value="确定">
+
+</body>
+
+</html>

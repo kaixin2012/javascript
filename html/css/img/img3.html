@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+
+	<style>
+		img {
+			width: 200px;
+			margin: 10px;
+			border: red 1px dashed;
+		}
+
+		.xxx {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			padding: 10px;
+			border: red 1px dashed;
+			display: inline;
+			float: left;
+		}
+	</style>
+
+	<body>
+		<div id="container" class="blue">
+		</div>
+
+		<script>
+			var container = document.getElementById("container");
+
+			for (var i = 0; i < 10; i++) {
+				// var img = new Image();
+				var img = document.createElement("img");
+				img.src = "./cat.jpg";
+
+				container.appendChild(img);
+			}
+
+			for (var i = 0; i < 10; i++) {
+				var div = document.createElement("div");
+				div.className = "xxx";
+				container.appendChild(div);
+
+				var input = document.createElement("input");
+				input.type = "button";
+				input.value = "click me";
+
+				div.appendChild(input);
+			}
+		</script>
+	</body>
+</html>

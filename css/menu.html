@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>Hello</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .sub {
+            background-color: cadetblue;
+            color: whitesmoke;
+            position: absolute;
+            display: none;
+        }
+
+        .menu-item {
+            background-color: teal;
+            transform: translateX(50%);
+            display: inline-block;
+            color: whitesmoke;
+            position: relative;
+            padding: 5px;
+            width: 40px;
+        }
+
+        .menu-item:hover .sub {
+            display: block;
+
+        }
+
+        .sub a {
+            display: block;
+            padding: 5px;
+        }
+
+        .sub a:hover {
+            background-color: rgb(1, 85, 85);
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="menu-item">
+
+        <span>科目</span>
+        <div class="sub">
+
+            <a>语文</a>
+            <a>数学</a>
+            <a>英语</a>
+
+        </div>
+    </div>
+
+
+    <div class="menu-item">
+
+        <span>科目</span>
+        <div class="sub">
+
+            <a>语文</a>
+            <a>数学</a>
+            <a>英语</a>
+
+        </div>
+    </div>
+
+
+    <div class="menu-item">
+
+        <span>科目</span>
+        <div class="sub">
+
+            <a>语文</a>
+            <a>数学</a>
+            <a>英语</a>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

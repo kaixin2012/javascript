@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>
+        dialog
+    </title>
+
+    <style>
+        body {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .dialog .content {
+            line-height: 220px;
+            height: 220px;
+        }
+
+        #button:hover {
+            background-color: rgb(108, 160, 131);
+        }
+
+        #button:active {
+            background-color: rgb(85, 131, 106);
+        }
+
+
+        .button-panel {
+            text-align: right;
+        }
+
+        #button {
+            border: 1px rgb(130, 202, 163) solid;
+            background-color: rgb(130, 202, 164);
+            padding: 5px 15px 5px 15px;
+            outline: none;
+
+        }
+
+
+        .dialog {
+            background-color: rgba(56, 238, 138, 0.062);
+            border: 1px rgb(5, 95, 5) solid;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 100px 5px slategray;
+            position: fixed;
+            display: none;
+            padding: 10px;
+            height: 300px;
+            width: 400px;
+            left: 50%;
+            top: 50%;
+        }
+
+        .pupop>input {
+            background-color: rgb(130, 202, 164);
+            padding: 3px 10px 3px 10px;
+            border: none;
+        }
+
+        .pupop:active .dialog {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pupop">
+
+        <input type="button" value="xxz" />
+
+        <div class="dialog">
+            xxz bbd
+
+            <hr />
+
+            <div class="content">
+                Which name do you prefer
+            </div>
+
+            <hr />
+
+            <div class="button-panel">
+                <input id="button" type="button" value="xxz">
+                <input id="button" type="button" value="bbd">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

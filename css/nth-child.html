@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>
+        table-Pseudo class
+    </title>
+
+    <style>
+        table {
+            border: 3px rgb(51, 121, 51) solid;
+            text-align: center;
+        }
+
+        th {
+            color: whitesmoke;
+            font-size: 14px;
+            width: 100px;
+            height: 30px;
+
+        }
+
+        tr td {
+            color: rgb(112, 177, 15);
+            font-size: 12px;
+            border: 1px rgba(124, 202, 21, 0.952) dashed;
+            border-width: 1px 1px 0 0;
+            height: 30px;
+            border-collapse: collapse;
+
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(212, 145, 154);
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <table>
+        <tr>
+            <th>运动项目</th>
+            <th>心里排名(3)</th>
+            <th>喜欢程度(5)</th>
+        </tr>
+        <tr>
+            <td>篮球</td>
+            <td>1</td>
+            <td class="last_td">5</td>
+        </tr>
+        <tr>
+            <td>跑步</td>
+            <td>2</td>
+            <td class="last_td">5</td>
+        </tr>
+        <tr>
+            <td>乒乓球</td>
+            <td>3</td>
+            <td class="last_td">4</td>
+        </tr>
+    </table>
+</body>
+
+</html>

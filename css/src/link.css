@@ -1,0 +1,13 @@
+input {
+    display: block;
+    background-color: chartreuse;
+    color: cornflowerblue;
+    border: rgb(15, 126, 15);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px;
+}
+
+img{
+    visibility: hidden;
+}

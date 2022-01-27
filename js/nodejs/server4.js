@@ -1,8 +1,27 @@
-var fs = require("fs");
+const readline = require('readline');
 
-var files = fs.readdirSync('/home/xufangbo/kaixin/git/javascript/nodejs');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-for(var i=0;i<files.length;i++){
-    var file = files[i];
-    console.log(file);
-}
+// ask user for the anme input
+rl.question(`What's your name? `, (name) => {
+
+    // ask for nationality
+    rl.question(`What are you from? `, (country) => {
+
+        rl.question(`How old are you? `, (age) => {
+
+            // log user details
+            var str = `${name} is from ${country} and he(she) is ${age} years old`;
+
+            console.log(str);
+
+            // close the stream
+            rl.close();
+        });
+
+    });
+
+});

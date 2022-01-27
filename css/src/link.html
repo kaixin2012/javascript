@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>
+        my window
+    </title>
+
+    <link rel="stylesheet" href="link.css">
+
+<body>
+    <input type="button" value="click me" onclick="fly()">
+    <img id="fly" src="./imng/xx.jpeg" />
+
+    <script>
+        function fly() {
+            var isok1 = window.confirm("Do you want open ?");
+            var myImg = document.getElementById("fly");
+
+            if (isok1) {
+                var isok2 = window.confirm("Do you want fly ?");
+
+                if (isok2) {
+                    myImg.style.visibility = "visible";
+                } else {
+                    myImg.style.visibility = "hidden";
+                }
+            } else {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title>五子棋</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400px" height="400" onclick="down(event);"></canvas>
+
+    <script>
+        let canv = document.getElementById("canvas");
+        let ctx = canv.getContext("2d");
+        let blorwh = false;
+        ctx.strokeStyle = "black";
+        ctx.beginPath();
+        for (let i = 0; i < 19; i++) {
+            ctx.moveTo(10 + i * 20, 10);
+            ctx.lineTo(10 + i * 20, 370);
+            ctx.moveTo(10, 10 + i * 20);
+            ctx.lineTo(370, 10 + i * 20);
+        }
+        ctx.stroke();
+
+        function down(event) {
+            let arcPosX, arcPosY;
+            let mtxPosX, mtxPosY;
+            let winFlag;
+
+            for (let x = 0; x < 19; x++) {
+                if ((Math.abs(event.offsetX - (10 + x * 20))) < 10) {
+                    arcPosX = 10 + x * 20;
+                    mtxPosX = x
+                }
+
+                if ((Math.abs(event.offsetY - (10 + x * 20))) < 10) {
+                    arcPosY = 10 + x * 20;
+                    mtxPosY = x
+                }
+            }
+
+            if (matrix[mtxPosX][mtxPosY] == 0) {
+                blorwh = !blorwh;
+                ctx.beginPath();
+
+                if (blorwh) {
+                    ctx.fillStyle = "black";
+                    ctx.arc(arcPosX, arcPosY, 10, 0, Math.PI * 2, false);
+                    matrix[mtxPosX][mtxPosY] = 1;
+                } else {
+                    ctx.fillStyle = "white";
+                    ctx.arc(arcPosX, arcPosY, 10, 0, Math.PI * 2, false);
+                    ctx.stroke();
+                    matrix[mtxPosX][mtxPosY] = 2;
+                }
+                ctx.fill();
+            }
+
+
+            if (matrix[mtxPosX - 1][mtxPosY] == matrix[mtxPosX][mtxPosY]) {
+                if (matrix[mtxPosX - 2][mtxPosY] == matrix[mtxPosX][mtxPosY]) {
+                    if (matrix[mtxPosX - 3][mtxPosY] == matrix[mtxPosX][mtxPosY]) {
+                        if (matrix[mtxPosX - 4][mtxPosY] == matrix[mtxPosX][mtxPosY]) {
+                            winFlag = 1;
+                        } else {
+                            if (matrix[mtxPosX + 1][mtxPosY] != matrix[mtxPosX][mtxPosY]) {
+                                winFlag = 0;
+                            } else {
+                                winFlag = 1;
+                            }
+                        }
+                    } else {
+                        for (let w = 0; w < 2; w++) {
+                            if (matrix[mtxPosX + w + 1][mtxPosY] != matrix[mtxPosX][mtxPosY]) {
+                                winFlag = 0;
+                                break;
+                            } else {
+                                winFlag = 1;
+                            }
+                        }
+                    }
+                } else {
+                    for (w = 0; w < 3; w++) {
+                        if (matrix[mtxPosX + w + 1][mtxPosY] != matrix[mtxPosX][mtxPosY]) {
+                            winFlag = 0;
+                            break;
+                        } else {
+                            winFlag = 1;
+                        }
+                    }
+                }
+            } else {
+                for (w = 0; w < 4; w++) {
+                    if (matrix[mtxPosX + w + 1][mtxPosY] != matrix[mtxPosX][mtxPosY]) {
+                        winFlag = 0;
+                        break;
+                    } else {
+                        winFlag = 1;
+                    }
+                }
+            }
+
+            if (winFlag == 1) {
+                if (blorwh) {
+                    alert("black win!!!");
+                } else {
+                    alert("white win!!!");
+                }
+            }
+
+        }
+
+        let matrix = [
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        ];
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <style>
+        .submit {
+            height: 60px;
+            width: 60px;
+            font-size: 15px;
+            margin: 1px;
+            flex: 1;
+        }
+
+        .text {
+            height: 50px;
+            font-size: 30px;
+            width: 100%;
+            text-align: right;
+        }
+
+        .zero {
+            flex: 2.3;
+        }
+
+        .cal {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Calculator {
+            width: 260px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div></div>
+        <div class="Calculator">
+            <div class="cal">
+                <input type="text" name="Calculator" class="Calculator text" readonly class="text">
+            </div>
+
+            <div class="cal">
+                <input type="submit" value="c" class="submit" id="c" onclick="calculator(this)">
+                <input type="submit" value="-" class="submit" id="-" onclick="calculator(this)">
+                <input type="submit" value="%" class="submit" id="%" onclick="calculator(this)">
+                <input type="submit" value="/" class="submit" id="/" onclick="calculator(this)">
+            </div>
+
+            <div class="cal">
+                <input type="submit" value="7" class="submit" id="7" onclick="calculator(this)">
+                <input type="submit" value="8" class="submit" id="8" onclick="calculator(this)">
+                <input type="submit" value="9" class="submit" id="9" onclick="calculator(this)">
+                <input type="submit" value="*" class="submit" id="*" onclick="calculator(this)">
+            </div>
+
+            <div class="cal">
+                <input type="submit" value="4" class="submit" id="4" onclick="calculator(this)">
+                <input type="submit" value="5" class="submit" id="5" onclick="calculator(this)">
+                <input type="submit" value="6" class="submit" id="6" onclick="calculator(this)">
+                <input type="submit" value="-" class="submit" id="-" onclick="calculator(this)">
+            </div>
+
+            <div class="cal">
+                <input type="submit" value="1" class="submit" id="1" onclick="calculator(this)">
+                <input type="submit" value="2" class="submit" id="2" onclick="calculator(this)">
+                <input type="submit" value="3" class="submit" id="3" onclick="calculator(this,event)">
+                <input type="submit" value="+" class="submit" id="+" onclick="calculator(this)">
+            </div class="cal">
+
+            <div class="cal">
+                <input type="submit" value="0" class="submit zero" id="0" onclick="calculator(this)">
+                <input type="submit" value="." class="submit" id="." onclick="calculator(this)">
+                <input type="submit" value="=" class="submit" id="=" onclick="calculator(this)">
+            </div>
+
+        </div>
+        <div></div>
+    </div>
+
+    <script>
+    //     let buttons = document.querySelectorAll(".submit");
+
+    //     buttons.forEach(btn => btn.onclick = buttonClicked);
+
+    //     function buttonClicked(e) {
+    //         let btn = e.target;
+    //     }
+    // </script>
+
+    <script>
+
+        // console.log("initialize ");
+        let operator, leftString;
+
+        function calculator(btn) {
+            let text = document.querySelector(".text");
+
+            if (btn.value == "1") {
+                text.value += "1";
+            } else if (btn.value == "2") {
+                text.value += "2";
+            } else if (btn.value == "3") {
+                text.value += "3"
+            } else if (btn.value == "4") {
+                text.value += "4";
+            } else if (btn.value == "5") {
+                text.value += "5";
+            } else if (btn.value == "6") {
+                text.value += "6";
+            } else if (btn.value == "7") {
+                text.value += "7";
+            } else if (btn.value == "8") {
+                text.value += "8";
+            } else if (btn.value == "9") {
+                text.value += "9";
+            } else if (btn.value == "0") {
+                text.value += "0";
+            } else if (btn.value == "c") {
+                text.value = "";
+            } else if (btn.value == ".") {
+                text.value += ".";
+            } else if (btn.value == "%") {
+                let bai = text.value / 100;
+                text.value = bai
+            } else if (btn.value == "negative") {
+                text.value = "neg";
+            } else if (btn.value == "+") {
+                leftString = text.value;
+                operator = "+";
+                text.value = "";
+                console.log(operator, leftString, text.value);
+            } else if (btn.value == "-") {
+                leftString = text.value;
+                operator = "-";
+                text.value = "";
+            } else if (btn.value == "*") {
+                leftString = text.value;
+                operator = "*";
+                text.value = "";
+            } else if (btn.value == "/") {
+                leftString = text.value;
+                operator = "/";
+                text.value = "";
+            } else if (btn.value == "=") {
+                console.log(operator, leftString, text.value);
+                equal(text);
+            }
+        }
+        // debugger;
+        function equal(text) {
+            console.log(operator, leftString, text.value);
+            if (operator == "+") {
+                let firstValue = parseFloat(leftString);
+                let secondValue = parseFloat(text.value);
+                text.value = firstValue + secondValue;
+            } else if (operator == "-") {
+                let firstValue = parseFloat(leftString);
+                let secondValue = parseFloat(text.value);
+                text.value = firstValue - secondValue;
+            } else if (operator == "*") {
+                let firstValue = parseFloat(leftString);
+                let secondValue = parseFloat(text.value);
+                text.value = firstValue * secondValue;
+            } else if (operator == "/") {
+                let firstValue = parseFloat(leftString);
+                let secondValue = parseFloat(text.value);
+                text.value = firstValue / secondValue;
+            }
+        }
+
+        // console.log("end ");
+
+    </script>
+</body>
+
+</html>

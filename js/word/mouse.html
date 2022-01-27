@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>mouse</title>
+
+    <style>
+        #panel {
+            height: 100;
+            background-color: green;
+        }
+
+        #txt {
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="panel" onmouseenter="onMouseEnter(event)" onmousedown="onMouseDown(event)" onmouseup="onMouseUp(event)"
+        onmousewheel="onMouseWheel(event)" onmouseleave="onMouseLeave(event)" onmousemove="onMouseMove(event)">
+        <span id="txt" />
+    </div>
+
+    <script>
+        let panel = document.querySelector("#panel");
+        let txt = document.querySelector("#txt");
+
+        function onMouseEnter(event) {
+            panel.style.backgroundColor = "black";
+        }
+
+        function onMouseDown(event) {
+            panel.style.backgroundColor = "red";
+        }
+
+        function onMouseUp(event) {
+            panel.style.backgroundColor = "blue";
+        }
+
+        function onMouseWheel(event) {
+            panel.style.backgroundColor = "yellow";
+        }
+
+        function onMouseLeave(event) {
+            panel.style.backgroundColor = "silver";
+        }
+
+        function onMouseMove(event) {
+            // txt.textContent = "(x:" + event.offsetX + "y:" + event.offsetY + ")";
+            txt.textContent = `(x:${event.offsetX},y:${event.offsetY})`;
+        }
+    </script>
+</body>
+
+</html>

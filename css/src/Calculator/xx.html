@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>
+        xx
+    </title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400px" height="400px" style="background:whitesmoke" />
+</body>
+
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var y = 0;
+    var speed = 2;
+
+    function draw() {
+        ctx.clearRect(0, 0, 400, 400);
+        ctx.fillRect(180, y, 20, 20);
+
+        y = y + speed;
+        if (y > 400 || y < 0) {
+            speed = 0 - speed;
+        }
+    }
+
+    setInterval(draw, 30);
+
+</script>
+
+</html>

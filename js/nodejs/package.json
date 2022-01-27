@@ -1,12 +1,6 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server1.js",
-  "scripts": {
-    "test": "echo hello",
-    "start": "supervisor server1.js"
-  },
-  "author": "xuxingzhi",
-  "license": "ISC"
+  "dependencies": {
+    "express": "^4.17.1",
+    "koa": "^2.13.1"
+  }
 }

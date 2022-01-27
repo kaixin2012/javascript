@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>drawLine</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="250px" height="250px">
+
+        <script>
+            let canvas = document.querySelector("#canvas");
+            let ctx = canvas.getContext("2d");
+            let length = 100;
+
+            ctx.beginPath();
+
+            ctx.moveTo(0, 100);
+            ctx.lineTo(length, 200);
+
+            ctx.stroke();
+        </script>
+</body>
+
+</html>

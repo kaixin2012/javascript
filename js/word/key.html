@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="key" onkeydown="onkeyDown(event)" onkeyup="onkeyUp(event)">
+
+    <script>
+        function onkeyDown(event) {
+            console.log("key down", event.keyCode, event.key, event.shiftKey, event.ctrlKey);
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        function onkeyUp(event) {
+            console.log("key up", event.keyCode, event.key, event.shiftKey, event.ctrlKey);
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>koa</title>
+
+    <style>
+        .submit {
+            border-radius: 3px;
+            border: none;
+            background-color: rgb(216, 133, 233);
+            padding: 10px;
+        }
+
+        .stu {
+            color: green;
+            height: 100px;
+            width: 100px;
+            background-color: turquoise;
+            margin: 10px;
+            float: left;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="submit" class="submit" value="query" onclick="query()">
+    <input type="submit" class="submit" value="add" onclick="add()">
+    <br>
+    <div id="container">
+    </div>
+
+    <script>
+        function query() {
+            let url = "/api/student";
+            fetch(url)
+                .then(res => res.json())
+                .then(data => renderStudentList(data));
+        }
+
+        function add() {
+            let url = "/api/student";
+            let stu = { id: 1, name: "Alex" };
+            let pars = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(stu)
+            }
+            fetch(url, pars)
+                .then(res => res.json())
+                .then(data => console.log(data));
+        }
+
+        function renderStudentList(data) {
+            // debugger;
+
+            let container = document.querySelector("#container");
+            container.innerHTML = "";
+            for (let stu of data) {
+                let div = document.createElement("div");
+                div.className = "stu";
+                container.appendChild(div);
+
+                let div_id = document.createElement("div");
+                div_id.textContent = stu.id;
+                div_id.className = "stu_id";
+                div.appendChild(div_id);
+
+                let div_name = document.createElement("div");
+                div_name.textContent = stu.name;
+                div_name.className = "stu_name";
+                div.appendChild(div_name);
+            }
+        }
+    </script>
+</body>
+
+</html>

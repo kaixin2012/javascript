@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>media</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            background-color: rgb(39, 114, 33);
+            color: whitesmoke;
+            line-height: 1000px;
+            text-align: center;
+            height: 1000px;
+
+        }
+
+        @media (max-width: 850px) {
+            .box {
+                background-color: teal;
+                line-height: 1000px;
+                height: 1000px;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .box {
+                background-color: rgba(121, 10, 10, 0.945);
+                line-height: 1000px;
+                height: 1000px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">media</div>
+</body>
+
+</html>

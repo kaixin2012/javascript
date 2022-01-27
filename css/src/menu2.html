@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello</title>
+
+    <style>
+        body {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .menu-item {
+            background-color: rgb(97, 141, 53);
+            position: relative;
+            color: whitesmoke;
+            display: inline;
+            padding: 10px;
+        }
+
+        .sub {
+            background-color: rgb(20, 145, 82);
+            position: absolute;
+            left: 0;
+            color: whitesmoke;
+            display: none;
+            width: 150px;
+        }
+
+        .menu-item:hover .sub {
+            display: block;
+            padding: 5px;
+        }
+
+        .sub a:nth-child(n+2) {
+            border: solid rgb(85, 160, 85);
+            border-width: 1px 0 0 0;
+        }
+
+
+        .menu-item:nth-child(n+2) {
+            border: solid whitesmoke;
+            border-width: 0 1px 0 0;
+        }
+
+        .sub a {
+            display: block;
+            padding: 5px;
+        }
+
+        .sub a:hover {
+            background-color: teal;
+        }
+
+        kaixin {
+            color: red;
+            font-size: 40px;
+            background-color: green;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="menu-item">
+
+        <span>科目1</span>
+        <div class="sub">
+            <a>语文1</a>
+            <a>数学1</a>
+            <a>英语1</a>
+
+        </div>
+    </div>
+
+
+    <div class="menu-item">
+
+        <span>科目2</span>
+        <div class="sub">
+            <a>语文2</a>
+            <a>数学2</a>
+            <a>英语2</a>
+
+        </div>
+    </div>
+
+
+    <div class="menu-item">
+
+        <span>科目3</span>
+        <div class="sub">
+            <a>语文3</a>
+            <a>数学3</a>
+            <a>英语3</a>
+
+        </div>
+    </div>
+
+    <kaixin>你好</kaixin>
+
+
+
+</body>
+
+</html>

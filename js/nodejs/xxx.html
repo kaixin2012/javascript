@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <style>
+        #btn {
+            background-color: rgb(61, 141, 59);
+            border: 0;
+            color: honeydew;
+        }
+
+        body {
+            background-color: rgba(73, 177, 64, 0.644);
+            padding: 50px 0 0 30px;
+        }
+
+        select {
+            width: 40px;
+        }
+
+        input,
+        select {
+            background-color: rgb(183, 236, 183);
+            border: 1px rgb(38, 167, 38) solid;
+            outline: none;
+            color: green;
+            height: 30px;
+            border-radius: 3px;
+        }
+
+        input[type="button"] {
+            width: 60px;
+        }
+    </style>
+
+    <script>
+        function caculate() {
+            var select = document.querySelector("#number2");
+
+            var v1 = document.querySelector("#number1").value;
+            var v3 = document.querySelector("#number3").value;
+
+            var n1 = Number(v1);
+            var n2 = Number(v3);
+
+            var n3 = 0;
+            if (select.value == "+") {
+                n3 = n1 + n2;
+            } else if (select.value == "-") {
+                n3 = n1 - n2;
+            } else if (select.value == "*") {
+                n3 = n1 * n2;
+            } else if (select.value == "/") {
+                n3 = n1 / n2;
+            }
+
+            document.getElementById("number4").value = n3;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" placeholder="请输入第一个操作数" id="number1" class="">
+    <select id="number2" class="select">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" placeholder="请输入第二个操作数" id="number3">
+    <input type="button" value="=" onclick="caculate()" id="btn">
+    <input type="number" id="number4" disabled="true" placeholder="结果">
+</body>
+
+</html>

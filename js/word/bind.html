@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="btn" type="button" value="点我" />
+
+    <script>
+
+        this.a = 3;
+
+        function fun222() {
+
+            this.size = 14;
+
+            console.log(this);
+
+            console.log("size", this.size);
+            console.log("value", this.value);
+            console.log("age", this.age);
+        }
+
+        let person = { name: "张三", age: 5, value: "test" };
+
+        let btn = document.getElementById("btn");
+
+        let fun3 = fun222.bind(person);
+        btn.onclick = fun3;
+
+        fun222();
+        console.log("---------------");
+
+        console.log("window.a", window.a);
+
+
+        class ClickCounter extends Component {
+
+            constructor() {
+                this.count = 0;
+
+                this.onIncreasedClicked = this.onIncreasedClicked.bind(this);
+                this.onDecreasedClicked = this.onDecreasedClicked.bind(this);
+            }
+
+            onIncreasedClicked() {
+                this.count++;
+            }
+
+            onDecreasedClicked() {
+                this.count--;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

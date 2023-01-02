@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <input type="text" id="text_1">
+    <select id="select">
+        <option value="+">+</option>
+        <option value="+">+</option>
+        <option value="×">×</option>
+        <option value="÷">÷</option>
+    </select>
+    <input type="text" id="text_2">
+    <input type="button" value="=" id="btn" onclick="calculator()">
+    <input type="text" id="equal">
+
+    <script>
+        function calculator() {
+            var text_1 = document.querySelector("#text_1").value;
+            var select = document.querySelector("#select");
+            var text_2 = document.querySelector("#text_2").value;
+
+            var num_1 = Number(text_1);
+            var num_2 = Number(text_2);
+            var number = 0;
+            if (select.value == "+") {
+                number = num_1 + num_2;
+            } else if (select.value == "-") {
+                number = num_1 - num_2;
+            } else if (select.value == "×") {
+                number = num_1 * num_2;
+            } else if (select.value == "÷") {
+                number = num_1 / num_2;
+            }
+
+            var equal = document.querySelector("#equal").value = number;
+        }
+    </script>
+</body>
+
+</html>

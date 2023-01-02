@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <input type="text" id="text_1">
+    <select id="select" style="font-size: 15px;">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="×">×</option>
+        <option value="÷">÷</option>
+    </select>
+    <input type="text" id="text_2">
+    <input type="button" value="=" onclick="calculator()" id="btn">
+    <input type="text" id="equal" style="width: 100px;">
+
+    <script>
+        function calculator() {
+            var t1 = document.querySelector("#text_1").value;
+            var select = document.querySelector("#select");
+            var t2 = document.querySelector("#text_2").value;
+
+            var n1 = Number(t1);
+            var n2 = Number(t2);
+            var num = 0;
+            if (select.value == "+") {
+                num = n1 + n2;
+            } else if (select.value == "-") {
+                num = n1 - n2;
+            } else if (select.value == "×") {
+                num = n1 * n2;
+            } else if (select.value == "÷") {
+                num = n1 / n2;
+            }
+            var equal = document.getElementById("equal").value = num;
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Student stu1("tom");
+Student stu1("kevin");
+
+
+//===========================
+struct Student_t{
+    char * name;
+}
+Student_t Student_new(char * name){
+    Student_t stu = malloc(xxx);
+    return stu;
+}
+
+int * i = new int(5);
+int i(5);
+
+
+int i = 5;
+
+int a = 2;  //0x001
+int b = 3;  //0x002
+
+int c = 2 + 3; -->

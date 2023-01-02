@@ -1,5 +1,5 @@
-function add(){
-    for(var i=0;i<10;i++){
+function add() {
+    for (var i = 0; i < 10; i++) {
         console.log("kanxin");
     }
 }
